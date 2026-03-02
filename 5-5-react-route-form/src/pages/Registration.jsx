@@ -1,15 +1,17 @@
 import { useState } from "react";
 
 export default function Registration() {
+
   const [email, setEmail] = useState("");
+
+  const [password, setPassword] = useState("");
+  const[gender, setGender] = useState("");
 
   const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    {/*Form validations*/}
 
-    // alert(`Regiteration submit: ${email}`);
   };
 
   return (
@@ -36,15 +38,20 @@ export default function Registration() {
           )}
         </div>
         <div className="form-row">
-           {/*password*/}
+           {/*5*/}
+
         </div>
 
         <fieldset className="form-row">
-          {/*Radio Button for gender*/}
+          {/*6*/}
+
         </fieldset>
 
-          {/*Disable the submit button until all requirements met*/}
-        <button type="submit" className="btn">Register</button>
+          {/*7*/}
+
+        <button type="submit" className="btn">
+            Register
+        </button>
       </form>
 
       <div className="card info">
