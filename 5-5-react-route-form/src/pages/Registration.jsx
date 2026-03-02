@@ -82,6 +82,7 @@ export default function Registration() {
 
         </fieldset>
 
+
           {/*7*/}
 
 
