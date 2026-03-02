@@ -145,18 +145,34 @@
 // ================================================================
 
 
+import {NavLink, Route, Routes} from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Registration from "./pages/Registration";
+
 export default function App() {
   return (
     <div className="app">
       <nav className="navbar">
         <div className="brand">🧑‍💻 Student Portal</div>
         <div className="links">
-          {/*Nav links*/}
+
+          <NavLink to="/" end className="navlink">
+              Home
+          </NavLink>
+
+            <NavLink to="/about" end className="navlink">
+                About
+            </NavLink>
+
+            <NavLink to="/registration" end className="navlink">
+                Registration
+            </NavLink>
         </div>
       </nav>
 
       <main className="container">
-        {/*Routes*/}
+
       </main>
 
       <footer className="footer">
