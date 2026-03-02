@@ -39,6 +39,18 @@ export default function Registration() {
         </div>
         <div className="form-row">
            {/*5*/}
+            <label htmlFor="password">Password</label>
+            <input
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                aria-invalid={Boolean(errors.password)}
+                aria-describedby={errors.password ? "password-error" : undefined}
+            />
+            {errors.password && (
+                <p id="password-error" className="error">{errors.password}</p>
+            )}
 
         </div>
 
