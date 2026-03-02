@@ -11,8 +11,21 @@ export default function Registration() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const nextErrors={};
+      if (!email.trim()) nextErrors.email = "Email is required";
+      else if (!(email.includes("@") && email.endsWith(".com")))
+          nextErrors.email = "Enter a valid email address";
+      if (!password.trim()) nextErrors.password = "Password is required";
+      if (!gender) nextErrors.gender = "Please select your gender";
+      setErrors(nextErrors);
+      if (Object.keys(nextErrors).length > 0) return;
+      alert(`Regiteration submit: ${email}`);
 
   };
+
+
+
+
 
   return (
     <section>
