@@ -56,12 +56,36 @@ export default function Registration() {
 
         <fieldset className="form-row">
           {/*6*/}
+            <legend>Gender</legend>
+            <label className="radio">
+                <input
+                    type="radio"
+                    name="gender"
+                    value="male"
+                    checked={gender === "male"}
+                    onChange={(e) => setGender(e.target.value)}
+                />
+                Male
+            </label>
+
+            <label className="radio">
+                <input
+                    type="radio"
+                    name="gender"
+                    value="female"
+                    checked={gender === "female"}
+                    onChange={(e) => setGender(e.target.value)}
+                />
+                Female
+            </label>
+            {errors.gender && <p className="error">{errors.gender}</p>}
 
         </fieldset>
 
           {/*7*/}
 
-        <button type="submit" className="btn">
+
+        <button type="submit" className="btn" disabled={!email.trim() || !password.trim() || !gender}>
             Register
         </button>
       </form>
